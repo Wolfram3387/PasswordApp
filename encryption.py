@@ -19,4 +19,4 @@ def decrypt_password(token) -> str:
     :return: пароль
     """
     f = Fernet(KEY)
-    return str(f.decrypt(token))[2:-1]
+    return str(f.decrypt(token[2:-1]))[2:-1]
