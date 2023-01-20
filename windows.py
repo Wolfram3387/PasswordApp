@@ -65,6 +65,7 @@ class MainWindow(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
         column_size = (self.size().width() - 24) // self.tableWidget.columnCount() - 10
         self.tableWidget.setColumnWidth(0, column_size)
         self.tableWidget.setColumnWidth(1, column_size)
+        self.tableWidget.resizeRowsToContents()
 
     def password_clicked(self, item):
         """Обработчик нажатия на строку с паролями"""
@@ -76,7 +77,8 @@ class MainWindow(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
         for mark, password in passwords.items():
             if item.text() in (mark, password):
                 QApplication.clipboard().setText(encryption.decrypt_password(password))
-        warning(text='Пароль скопирован в буфер обмена', title='Уведомление', icon=QMessageBox.Information)
+        warning(
+            text='Расшифрованный пароль скопирован в буфер обмена', title='Уведомление', icon=QMessageBox.Information)
 
     def resizeEvent(self, event):
         # При изменении главного окна, изменяется и размер таблицы

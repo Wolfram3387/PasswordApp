@@ -17,6 +17,12 @@ class Ui_MainWindow(object):
         MainWindow.resize(479, 243)
         MainWindow.setMinimumSize(QtCore.QSize(463, 222))
         MainWindow.setMaximumSize(QtCore.QSize(960, 365))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("C:\\Users\\wolfr\\PycharmProjects\\PasswordApp\\../../Downloads/lock_icon.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setStyleSheet("background-color:rgb(255, 255, 201)")
+        MainWindow.setIconSize(QtCore.QSize(512, 512))
+        MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
@@ -47,6 +53,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEdit_mark.setFont(font)
+        self.lineEdit_mark.setStyleSheet("")
         self.lineEdit_mark.setInputMethodHints(QtCore.Qt.ImhNone)
         self.lineEdit_mark.setText("")
         self.lineEdit_mark.setMaxLength(100)
@@ -57,6 +64,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("background: rgb(255, 253, 189);\n"
+"    color: rgb(0, 0, 0);")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.gridLayout.addLayout(self.verticalLayout, 1, 1, 1, 1)
@@ -70,7 +79,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Добавление пароля"))
         self.label.setText(_translate("MainWindow", "Метка:"))
         self.lineEdit_mark.setPlaceholderText(_translate("MainWindow", "Введите метку для пароля"))
         self.pushButton.setText(_translate("MainWindow", "Сгенерировать пароль"))

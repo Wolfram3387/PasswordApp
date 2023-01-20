@@ -1,2 +1,0 @@
-pyuic5 C:\Users\wolfr\PycharmProjects\PasswordApp\AddPasswordWindow.ui -o C:\Users\wolfr\PycharmProjects\PasswordApp\AddPasswordWindow.py
-pyuic5 C:\Users\wolfr\PycharmProjects\PasswordApp\MainWindow.ui -o C:\Users\wolfr\PycharmProjects\PasswordApp\MainWindow.py

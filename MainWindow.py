@@ -15,6 +15,15 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(640, 351)
+        MainWindow.setMaximumSize(QtCore.QSize(1280, 1000))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        MainWindow.setFont(font)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("C:\\Users\\wolfr\\PycharmProjects\\PasswordApp\\../../Downloads/lock_icon.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setStyleSheet("background-color:rgb(255, 255, 201)")
+        MainWindow.setIconSize(QtCore.QSize(512, 512))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -26,6 +35,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEdit_search.setFont(font)
+        self.lineEdit_search.setStyleSheet("background: rgb(255, 253, 189);\n"
+"    color: rgb(0, 0, 0);")
         self.lineEdit_search.setMaxLength(100)
         self.lineEdit_search.setObjectName("lineEdit_search")
         self.verticalLayout_2.addWidget(self.lineEdit_search)
@@ -42,6 +53,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("background: rgb(255, 253, 189);\n"
+"    color: rgb(0, 0, 0);")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -51,6 +64,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Хранитель паролей"))
         self.lineEdit_search.setPlaceholderText(_translate("MainWindow", "Поиск по меткам"))
         self.pushButton.setText(_translate("MainWindow", "Создать новый пароль"))

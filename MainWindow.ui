@@ -10,8 +10,33 @@
     <height>351</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Хранитель паролей</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <selectedon>../../Downloads/lock_icon.png</selectedon>
+   </iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(255, 255, 201)</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>512</width>
+    <height>512</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -26,6 +51,10 @@
          <font>
           <pointsize>12</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgb(255, 253, 189);
+    color: rgb(0, 0, 0);</string>
         </property>
         <property name="maxLength">
          <number>100</number>
@@ -52,6 +81,10 @@
        <font>
         <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(255, 253, 189);
+    color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>Создать новый пароль</string>
